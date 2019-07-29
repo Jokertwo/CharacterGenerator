@@ -1,0 +1,6 @@
+Machine Gun
+2
+2
+Sniper Rifle
+3
+1
