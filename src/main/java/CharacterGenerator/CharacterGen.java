@@ -13,7 +13,7 @@ public class CharacterGen implements CharacterGenerator {
     List<Weapon> weaponList = new ArrayList<Weapon>();
 
     /**
-     * Ask the user to input player information
+     * Ask the user to input player informatio n
      * @param sc
      * @return Character(Player Kind)
      */
