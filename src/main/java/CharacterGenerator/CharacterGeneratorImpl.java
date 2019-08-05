@@ -7,16 +7,12 @@ import java.util.Scanner;
 
 import static CharacterGenerator.Kind.PLAYER;
 
-public class CharacterGen implements CharacterGenerator {
+public class CharacterGeneratorImpl implements CharacterGenerator {
 
     List<Character> enemyList = new ArrayList<Character>();
     List<Weapon> weaponList = new ArrayList<Weapon>();
 
-    /**
-     * Ask the user to input player informatio n
-     * @param sc
-     * @return Character(Player Kind)
-     */
+
     public Character loadPlayer(Scanner sc){
         System.out.println("Enter name for Character");
         String charName = sc.nextLine();
@@ -51,29 +47,10 @@ public class CharacterGen implements CharacterGenerator {
         return new Weapon(weaponName, attackPower, defense);
     }
 
-    /**
-     * Construct a list of enemies using scanner.
-     * Populates enemyList
-     * @param sc
-     */
-    public void setEnemyList(Scanner sc) {
-        while (sc.hasNextLine()) {
-            String charName = sc.nextLine();
-            int attackPower = Integer.parseInt(sc.nextLine());
-            int defense = Integer.parseInt(sc.nextLine());
-            int health = Integer.parseInt(sc.nextLine());
-            Kind kind = Kind.valueOf(sc.nextLine());
-
-            Character currentEnemy = new Character(charName, health, attackPower, defense, kind);
-
-            enemyList.add(currentEnemy);
-        }
+    public void setEnemyList(List<Character> characterList) {
+        enemyList = characterList;
     }
 
-    /**
-     * Pulls a random character from enemyList
-     * @return enemyList.get(randomNumber)
-     */
     public Character getRandomCharacter() {
         Random r = new Random();
         int randomNumber = Math.abs(r.nextInt());
@@ -82,27 +59,14 @@ public class CharacterGen implements CharacterGenerator {
         return enemyList.get(randomNumber);
     }
 
-    /**
-     * Construct a list of weapons using scanner.
-     * Populates weaponList
-     * @param sc
-     */
-    public void setWeaponList(Scanner sc) {
-        while (sc.hasNextLine()) {
-            String weaponName = sc.nextLine();
-            int attackPower = Integer.parseInt(sc.nextLine());
-            int defense = Integer.parseInt(sc.nextLine());
-
-            Weapon currentWeapon = new Weapon(weaponName, attackPower, defense);
-
-            weaponList.add(currentWeapon);
-        }
+    public List<Character> getEnemyList(){
+        return enemyList;
     }
 
-    /**
-     * 50% chance to equip a weapon or not. Then return null or pulls a random weapon from weaponList.
-     * @return weaponList.get(randomNumber) or null
-     */
+    public void setWeaponList(List<Weapon> weaponsList) {
+        weaponList = weaponsList;
+    }
+
     public Weapon getRandomWeapon() {
         Random r = new Random();
         int randomNumber = Math.abs(r.nextInt());
@@ -113,5 +77,9 @@ public class CharacterGen implements CharacterGenerator {
         } else {
             return null;
         }
+    }
+
+    public List<Weapon> getWeaponList(){
+        return weaponList;
     }
 }

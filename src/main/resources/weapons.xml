@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<weapons>
+    <weapon weaponName="Machine Gun">
+        <attack>2</attack>
+        <defense>2</defense>
+    </weapon>
+    <weapon weaponName="Sniper Rifle">
+        <attack>3</attack>
+        <defense>1</defense>
+    </weapon>
+</weapons>

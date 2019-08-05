@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<enemies>
+    <enemy charName="Duke">
+		<attack>15</attack>
+        <defense>10</defense>
+        <health>120</health>
+        <kind>TERRAN</kind>
+    </enemy>
+    <enemy charName="Kerrigan">
+		<attack>22</attack>
+        <defense>2</defense>
+        <health>85</health>
+        <kind>TERRAN</kind>
+    </enemy>
+    <enemy charName="Duran">
+		<attack>8</attack>
+        <defense>8</defense>
+        <health>135</health>
+        <kind>TERRAN</kind>
+    </enemy>
+    <enemy charName="Raynor">
+		<attack>10</attack>
+        <defense>10</defense>
+        <health>90</health>
+        <kind>TERRAN</kind>
+    </enemy>
+    <enemy charName="Infested Kerrigan">
+		<attack>34</attack>
+        <defense>18</defense>
+        <health>220</health>
+        <kind>ZERG</kind>
+    </enemy>
+    <enemy charName="Hunter Killer">
+		<attack>10</attack>
+        <defense>10</defense>
+        <health>80</health>
+        <kind>ZERG</kind>
+    </enemy>
+    <enemy charName="Torrasque">
+		<attack>12</attack>
+        <defense>12</defense>
+        <health>120</health>
+        <kind>ZERG</kind>
+    </enemy>
+    <enemy charName="Aldaris">
+		<attack>8</attack>
+        <defense>12</defense>
+        <health>140</health>
+        <kind>PROTOSS</kind>
+    </enemy>
+    <enemy charName="Fenix">
+		<attack>10</attack>
+        <defense>12</defense>
+        <health>150</health>
+        <kind>PROTOSS</kind>
+    </enemy>
+    <enemy charName="Taldaron">
+		<attack>12</attack>
+        <defense>12</defense>
+        <health>160</health>
+        <kind>PROTOSS</kind>
+    </enemy>
+</enemies>

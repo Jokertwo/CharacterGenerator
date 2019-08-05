@@ -45,6 +45,16 @@ public class Character {
         return kind;
     }
 
+    public int getDefense(){ return defense; }
+
+    public int getCharacterHealth() {
+        return characterHealth;
+    }
+
+    public int getAttackDamage() {
+        return attackDamage;
+    }
+
     public String getName(){
         return characterName;
     }
