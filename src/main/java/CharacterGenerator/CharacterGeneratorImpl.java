@@ -9,10 +9,6 @@ import static CharacterGenerator.Kind.PLAYER;
 
 public class CharacterGeneratorImpl implements CharacterGenerator {
 
-    List<Character> enemyList = new ArrayList<Character>();
-    List<Weapon> weaponList = new ArrayList<Weapon>();
-
-
     public Character loadPlayer(Scanner sc){
         System.out.println("Enter name for Character");
         String charName = sc.nextLine();
@@ -45,41 +41,5 @@ public class CharacterGeneratorImpl implements CharacterGenerator {
         int defense = Integer.parseInt(sc.nextLine());
 
         return new Weapon(weaponName, attackPower, defense);
-    }
-
-    public void setEnemyList(List<Character> characterList) {
-        enemyList = characterList;
-    }
-
-    public Character getRandomCharacter() {
-        Random r = new Random();
-        int randomNumber = Math.abs(r.nextInt());
-        randomNumber = randomNumber % enemyList.size();
-
-        return enemyList.get(randomNumber);
-    }
-
-    public List<Character> getEnemyList(){
-        return enemyList;
-    }
-
-    public void setWeaponList(List<Weapon> weaponsList) {
-        weaponList = weaponsList;
-    }
-
-    public Weapon getRandomWeapon() {
-        Random r = new Random();
-        int randomNumber = Math.abs(r.nextInt());
-
-        if (randomNumber % 2 == 0) {
-            randomNumber = randomNumber % weaponList.size();
-            return weaponList.get(randomNumber);
-        } else {
-            return null;
-        }
-    }
-
-    public List<Weapon> getWeaponList(){
-        return weaponList;
     }
 }
